@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter.font import Font
 from tkinter import messagebox
 import customtkinter as ctk
 from clientes import Cliente

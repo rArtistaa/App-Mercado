@@ -56,7 +56,6 @@ class Produto:
         preco = float(resultado[1])
         quantidade = int(resultado[2])
 
-
         return (f'{"Produto":^20} | {"Preço":^13} | {"Quantidade":^19}\n\n'
                 f'{nome:<22}R${preco:<12}{quantidade}')
 

@@ -1,3 +1,4 @@
+from acessomercado import AcessoMercado
 from mercado import Mercado
 
 projeto = Mercado()

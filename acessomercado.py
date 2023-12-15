@@ -2,15 +2,16 @@ import tkinter as tk
 from tkinter import messagebox
 import customtkinter as ctk
 from clientes import Cliente
-from produtos import Produto
+from mercado import Mercado
 
 
-class AcessoMercado(Cliente):
+
+class AcessoMercado(Cliente, Mercado):
     def __init__(self):
         Cliente.__init__(self)
-        Produto.__init__(self)
 
         self.clientes = Cliente()
+        self.mercado = Mercado()
 
         ctk.set_appearance_mode('dark')
 
@@ -147,6 +148,7 @@ class AcessoMercado(Cliente):
             if login == cliente[1] and senha == cliente[2]:
                 messagebox.showinfo('Logado', 'Usuário validado, entrando no mercado')
                 self.main_root.destroy()
+                self.mercado.main_root.mainloop()
                 return
 
         messagebox.showwarning('Usuário inválido', 'Nome de usuário ou senha incorretos.\nTente novamente')
